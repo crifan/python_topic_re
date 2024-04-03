@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE book
+[
+
+<!ENTITY cur_book_name      "python_topic_re" >
+<!ENTITY publish_date       "2013-09-05" >
+<!ENTITY release_version    "1.0" >
+
+<!ENTITY copyrith_year "2013" >
+<!ENTITY entity_common_multi_format     SYSTEM  "../../entity_common_multi_format.xml">
+<!ENTITY entity_common_publish_info     SYSTEM  "../../entity_common_publish_info.xml">
+]>
+
+<book version="5.0"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:lang="zh_CN"
+    >
+
+<info>
+    <title>Python专题教程：正则表达式re模块详解</title>
+    <subtitle></subtitle>
+    <keywordset>
+        <keyword>Python专题教程</keyword>
+        <keyword>Python</keyword>
+        <keyword>正则表达式</keyword>
+        <keyword>re</keyword>
+        <keyword>模块</keyword>
+    </keywordset>
+
+    <abstract>
+        <para>本文主要介绍了Python中的正则表达式re模块，详细解释其用法，包括其下各种函数，比如re.findall,re.search,re.match等等。</para>
+        &entity_common_multi_format;
+    </abstract>
+
+    <revhistory>
+        <revision>
+            <revnumber>&release_version;</revnumber>
+            <date>&publish_date;</date>
+            <revremark>
+                <orderedlist>
+                    <listitem>将之前在正则表达式学习心得，Python语言总结中和Python相关的re模块的内容，都整理过来了。</listitem>
+                </orderedlist>
+            </revremark>
+            <authorinitials>crl</authorinitials>
+        </revision>
+    </revhistory>
+
+    &entity_common_publish_info;
+</info>
+
+<xi:include href="preface.xml" />
+<xi:include href="ch01_python_re_intro.xml" />
+<xi:include href="ch02_python_regex_grammar.xml" />
+<xi:include href="ch03_re_search.xml" />
+<xi:include href="ch04_re_findall.xml" />
+<xi:include href="ch05_re_match.xml" />
+<xi:include href="ch06_re_note_summary.xml" />
+<xi:include href="reference.xml" />
+
+</book>

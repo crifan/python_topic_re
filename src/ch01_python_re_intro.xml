@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:id="ch01_python_re_intro">
+<title>Python正则表达式re模块简介</title>
+<abstract></abstract>
+
+<sect1 xml:id="what_is_python_re"><title>什么是Python的re</title>
+    <para>正则表达式，是一门相对通用的语言。</para>
+    <para>Python中也有对正则表达式的支持，</para>
+    <para>对应的就是Python内置的re模块。</para>
+    <tip xml:id="tip.about_regular_expression"><title>关于正则表达式</title>
+        <para>简单说就是：</para>
+        <para>用一系列的规则语法，去匹配，查找，替换等操作字符串，</para>
+        <para>以达到对应的目的</para>
+        <para>此套规则，就是所谓的正则表达式</para>
+        <para>更详细的解释参见详细的教程：</para>
+        <para><link xl:href="http://www.crifan.com/files/doc/docbook/regular_expression/release/html/regular_expression.html">正则表达式学习心得</link></para>
+    </tip>
+    <para></para>
+    <para>Python中的正则表达式模块，即re模块，功能还是很强大的。</para>
+    <para>其支持常见的查找替换等功能，对应的是re.search，re.findall等函数。</para>
+    <para>详见后续的解释。</para>
+</sect1>
+
+</chapter>

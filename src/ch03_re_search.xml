@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:id="ch03_re_search">
+<title>Python中的re.search</title>
+<abstract></abstract>
+<para>此处介绍，Python中的正则表达式模块re中search函数的详细使用方法。</para>
+<para>即对应的re.search的功能和用法</para>
+<para></para>
+<para></para>
+</chapter>

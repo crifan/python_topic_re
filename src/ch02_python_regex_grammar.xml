@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:id="ch02_python_regex_grammar">
+<title>Python中正则表达式的语法</title>
+<abstract></abstract>
+<para>其实，Python中的正则表达式的语法，</para>
+<para>和通用的正则表达式的语法，</para>
+<para><link xl:href="http://www.crifan.com/files/doc/docbook/regular_expression/release/htmls/regular_expression_grammar.html">正则表达式的通用语法</link></para>
+<para>基本没太大区别。</para>
+<para>下面，再详细的解释一下，Python中的正则表达式的语法：</para>
+
+<sect1 xml:id="python_re_pros_cons"><title>Python中的正则表达式的特点</title>
+    <para>下面总结一些Python中的正则表达式相对于其他语言中的正则表达式的一些特点，包括优点和缺点：</para>
+    <orderedlist>
+        <listitem>python中字符串的表示，单引号和双引号，都是支持的。
+            <para>所以对于字符串中，有双引号的，可以在写字符串最外层用单引号括起来，而不需要用反斜杠了。</para>
+            <para>反之，如果需要表示的其中包括单引号，那么最外层用双引号，所以，还是很方便的。</para>
+        </listitem>
+        <listitem>对于匹配多个字符串的时候，好像不能加括号分组的，如果加括号分组了，那么只能匹配单个一个group就结束了。对应的要匹配多个字符串，好像只能使用findall。</listitem>
+    </orderedlist>
+</sect1>
+
+<sect1 xml:id="python_re_syntax"><title>Python正则表达式的语法</title>
+    <para>其实，其详细语法，可以参考Python自带的帮助（help）文件</para>
+    <para>可以通过在帮助文件的搜索框中输入re，然后就可以找到“(re.MatchObject attribute)”，双击，即调转到对应的re模块的内容的详细解释部分了。</para>
+    
+    <sect2 xml:id="re_module_syntax_summary"><title>re模块中的语法总结</title>
+        <para>关于re模块的基本语法，简单总结如下：</para>
+        <table xml:id="tbl.python_re_special_char"><title>Python中re模块中的特殊字符</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*" />
+                <colspec colnum="2" colname="col2" colwidth="6*" />
+                
+                <tbody>
+                    <row><entry>.</entry><entry>匹配任意字符</entry></row>
+                    <row><entry>[]</entry><entry>用来匹配一个指定的字符类别，所谓的字符类别就是你想匹配的一个字符集，对于字符集中的字符可以理解成或的关系</entry></row>
+                    <row><entry>^</entry>
+                        <entry>
+                            <simplelist type="vert" columns="1">
+                              <member>对于字符串，表示字符串的开头</member>
+                              <member>对于^加上一个其他数字或字符，表示取反。比如，[^5]表示除了5之外的任意字符。[^^]表示除了^字符之外任意字符。</member>
+                            </simplelist>
+                        </entry></row>
+                    <row><entry>$</entry><entry>匹配字符串的末尾，或者匹配换行之前的字符串末尾</entry></row>
+                    <row><entry>*</entry><entry>对于前一个字符重复0到无穷次</entry></row>
+                    <row><entry>+</entry><entry>对于前一个字符重复1到无穷次</entry></row>
+                    <row><entry>?</entry><entry>对于前一个字符重复0到1次</entry></row>
+                    <row><entry>{m,n}</entry>
+                        <entry>对于前一个字符重复次数在为m到n次。
+                            <simplelist type="vert" columns="1">
+                              <member>{0,}  == *</member>
+                              <member>{1,}  == </member>
+                              <member>{0,1} == ?</member>
+                              <member>{m} 对于前一个字符重复m次</member>
+                            </simplelist>
+                        </entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table xml:id="tbl.python_re_special_sequence"><title>Python中re模块中特殊转义序列（字符）</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*" />
+                <colspec colnum="2" colname="col2" colwidth="6*" />
+                
+                <tbody>
+                    <row><entry>\A</entry><entry>匹配字符串的开头</entry></row>
+                    <row><entry>\b</entry><entry>匹配一个空字符（仅对一个单词word的开始或结束有效）</entry></row>
+                    <row><entry>\B</entry><entry>与\b含义相反</entry></row>
+                    <row><entry>\d</entry><entry>匹配任何十进制数；它相当于类 [0-9]</entry></row>
+                    <row><entry>\D</entry><entry>匹配任何非数字字符；它相当于类 [^0-9]</entry></row>
+                    <row><entry>\s</entry><entry>匹配任何空白字符；它相当于类 [ \t\n\r\f\v]</entry></row>
+                    <row><entry>\S</entry><entry>匹配任何非空白字符；它相当于类 [^ \t\n\r\f\v]</entry></row>
+                    <row><entry>\w</entry><entry>匹配任何字母数字字符；它相当于类 [a-zA-Z0-9_]</entry></row>
+                    <row><entry>\W</entry><entry>匹配任何非字母数字字符；它相当于类 [^a-zA-Z0-9_]</entry></row>
+                    <row><entry>\Z</entry><entry>匹配字符串的结尾</entry></row>
+                </tbody>
+            </tgroup>
+        </table>
+    </sect2>
+</sect1>
+
+</chapter>

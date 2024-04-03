@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE preface>
+
+<preface    xml:id="preface"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:ns5="http://www.w3.org/1998/Math/MathML"
+    xmlns:ns4="http://www.w3.org/1999/xhtml"
+    xmlns:ns3="http://www.w3.org/2000/svg"
+    xmlns:ns="http://docbook.org/ns/docbook">
+<title>前言</title>
+
+<sect1 xml:id="purpose"><title>本文目的</title>
+    <para>本文目的在于，介绍Python中的正则表达式re模块的详细用法</para>
+    <para>包括常见的re.search，re.findall等函数的详细用法举例和注意事项</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="todo"><title>待完成</title>
+    <para>将下面帖子内容整理合并进来：</para>
+    <itemizedlist>
+        <listitem><link xl:href="http://www.crifan.com/summary_regular_expression_csharp_python/">【总结】关于（C#和Python中的）正则表达式</link></listitem>
+    </itemizedlist>
+    <para></para>
+    <para>之前抽空写了，Python中的正则表达式的系列教程。</para>
+    <para>暂时没写完，但是也算写了不少了。</para>
+    <para>现在整理出，已经写出的部分，供参考：</para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express">【教程】详解Python正则表达式</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_dot_match_any_single_char">【教程】详解Python正则表达式之： '.' dot 点 匹配任意单个字符</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_caret_match_string_start">【教程】详解Python正则表达式之： '^' Caret 脱字符/插入符 匹配字符串开始</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_dollar_match_string_end">【教程】详解Python正则表达式之： '$' dollar 美元符号 匹配字符串末尾</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_match_zero_or_more">【教程】详解Python正则表达式之： '*' star 星号 匹配0或多个</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_match_a_set_of_chars">【教程】详解Python正则表达式之： [] bracket 中括号 匹配某集合内的字符</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_about_vertical_bar/">【教程】详解Python正则表达式之： '|' vertical bar 竖杠</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_about_group/">【教程】详解Python正则表达式之： (…) group 分组</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_extension_notation">【教程】详解Python正则表达式之： (?…) extension notation 扩展助记符</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_non_capturing_group">【教程】详解Python正则表达式之： (?:...) non-capturing group 非捕获组</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_named_group">【教程】详解Python正则表达式之： (?P&lt;name&gt;…) named group 带命名的组</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_match_named_group">【教程】详解Python正则表达式之： (?P=name) match earlier named group 匹配前面已命名的组</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_yes_or_no_conditional_match">【教程】详解Python正则表达式之： (?(id/name)yes-pattern|no-pattern) 条件性匹配</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_lookahead_assertion">【教程】详解Python正则表达式之： (?=…) lookahead assertion 前向匹配 /前向断言</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_negative_lookahead_assertion">【教程】详解Python正则表达式之： (?!…) negative lookahead assertion 前向否定匹配 /前向否定断言</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_positive_lookbehind_assertion">【教程】详解Python正则表达式之： (?&lt;=…) positive lookbehind assertion 后向匹配 /后向断言</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_match_any_whitespace_char">【教程】详解Python正则表达式之：\s 匹配任一空白字符</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_flag_re_locale_re_l">【教程】详解Python正则表达式之：re.LOCALE re.L 本地化标志</link></para>
+    <para><link xl:href="http://www.crifan.com/detailed_explanation_about_python_regular_express_flag_re_unicode_re_u">【教程】详解Python正则表达式之：re.UNICODE re.U 统一码标志</link></para>
+    <para></para>
+    <para>另外，也针对re模块中的一些功能，比如findall，进行了整理：</para>
+    <para><link xl:href="http://www.crifan.com/python_re_search_vs_re_findall/">【整理】Python中的re.search和re.findall之间的区别和联系 + re.finall中带命名的组，不带命名的组，非捕获的组，没有分组四种类型之间的区别</link></para>
+     
+    <para>还有些和group相关的内容：</para>
+    <para><link xl:href="http://www.crifan.com/python_re_find_get_multiple_match_object_value/">【已解决】Python中的正则re查找中，从多个匹配的组中获得所有的匹配的值</link></para>
+    <para></para>
+    <para></para>
+</sect1>
+
+</preface>
